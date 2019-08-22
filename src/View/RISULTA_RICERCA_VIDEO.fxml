@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="Ahp_listadeifilm" fx:id="Ahp_listadeifilm" prefHeight="200.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+   <children>
+      <Label layoutX="106.0" layoutY="-1.0" prefHeight="31.0" prefWidth="135.0" text="LISTA DEI FILM">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView id="Tblv_listadeifilm" fx:id="Tblv_listadeifilm" layoutY="30.0" prefHeight="170.0" prefWidth="320.0">
+        <columns>
+          <TableColumn id="Tbc_title" fx:id="Tbc_title" prefWidth="75.0" text="TITLE" />
+          <TableColumn id="Tbc_genere" fx:id="Tbc_genere" prefWidth="100.0" text="GENERE" />
+            <TableColumn id="Tbc_duratta" fx:id="Tbc_duratta" prefWidth="67.0" text="DURATTA" />
+            <TableColumn id="Tbc_select" fx:id="Tbc_select" prefWidth="75.0" text="Select" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane id="Bdp_noleggio" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="prj.p1Controller">
+<BorderPane id="Bdp_noleggio" prefHeight="480.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="prj.p1Controller">
    <top>
       <Label text="NOLEGGIO" BorderPane.alignment="CENTER">
          <font>
@@ -28,9 +28,9 @@
    <center>
       <HBox id="Hbx_noleggio" fx:id="Hbx_noleggio" disable="true" prefHeight="254.0" prefWidth="405.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox id="Vbx_noleggio" fx:id="Vbx_noleggio" disable="true">
+            <VBox id="Vbx_noleggio" fx:id="Vbx_noleggio" disable="true" prefHeight="366.0" prefWidth="283.0">
                <children>
-                  <Button id="Btn_nuovocliente" fx:id="Btn_nuovocliente" disable="true" mnemonicParsing="false" onAction="#Handler_nuovocliente" text="NUOVO CLIENTE">
+                  <Button id="Btn_nuovocliente" fx:id="Btn_nuovocliente" disable="true" mnemonicParsing="false" onAction="#Handler_nuovocliente" prefHeight="30.0" prefWidth="248.0" text="NUOVO CLIENTE">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -38,7 +38,7 @@
                         <Insets bottom="30.0" left="15.0" right="10.0" top="20.0" />
                      </VBox.margin>
                   </Button>
-                  <Button id="Btn_ricercaclient" fx:id="Btn_ricercaclient" disable="true" mnemonicParsing="false" onAction="#Handler_ricercaclient" text="RICERCA CLIENTE">
+                  <Button id="Btn_ricercaclient" fx:id="Btn_ricercaclient" disable="true" mnemonicParsing="false" onAction="#Handler_ricercaclient" prefHeight="30.0" prefWidth="250.0" text="RICERCA CLIENTE">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -46,7 +46,24 @@
                         <Insets bottom="30.0" left="10.0" right="20.0" />
                      </VBox.margin>
                   </Button>
-                  <Button id="Btn_durata" fx:id="Btn_durata" disable="true" mnemonicParsing="false" onAction="#Handler_durata" text="DURATA">
+                  <Label id="Lbl_client" fx:id="Lbl_client" prefHeight="43.0" prefWidth="280.0" />
+                  <Button id="Btn_ricercavideo" fx:id="Btn_ricercavideo" disable="true" mnemonicParsing="false" onAction="#Handler_ricercavideo" prefHeight="30.0" prefWidth="263.0" text="RICERCA VIDEO">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="10.0" right="20.0" top="25.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="Btn_listavideo" fx:id="Btn_listavideo" disable="true" mnemonicParsing="false" onAction="#Handler_ricercavideo" prefHeight="30.0" prefWidth="263.0" text="LISTA VIDEO">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="10.0" right="20.0" top="25.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="Btn_durata" fx:id="Btn_durata" disable="true" mnemonicParsing="false" onAction="#Handler_durata" prefHeight="46.0" prefWidth="96.0" text="DURATA">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -59,7 +76,7 @@
                   <Insets bottom="30.0" />
                </padding>
             </VBox>
-            <TextArea id="Txa_noleggio" fx:id="Txa_noleggio" disable="true" prefHeight="254.0" prefWidth="254.0" />
+            <TextArea id="Txa_noleggio" fx:id="Txa_noleggio" disable="true" prefHeight="366.0" prefWidth="301.0" />
          </children>
       </HBox>
    </center>
