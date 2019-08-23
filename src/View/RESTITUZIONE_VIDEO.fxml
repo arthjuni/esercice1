@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="380.0" prefWidth="549.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+   <children>
+      <CheckBox id="Ckb_cattivostato" fx:id="Ckb_cattivostato" layoutX="427.0" layoutY="65.0" mnemonicParsing="false" onAction="#Handler_cattivostato" text="CATTIVO STATO" />
+      <Label layoutX="189.0" layoutY="14.0" text="RESTITUZIONE VIDEO">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox id="Cob_selectionclient" fx:id="Cob_selectionclient" layoutX="78.0" layoutY="110.0" onAction="#Handler_selectionclient" prefWidth="150.0" promptText="SELEZIONE CLIENT" />
+      <Label layoutX="228.0" layoutY="209.0" text="ADDEBITO CLIENT :" />
+      <TextField id="Txf_addebitoclient" fx:id="Txf_addebitoclient" layoutX="346.0" layoutY="189.0" prefHeight="51.0" prefWidth="150.0" />
+      <Text fontSmoothingType="LCD" layoutX="496.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="£">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Button id="Btn_conferma" fx:id="Btn_conferma" layoutX="421.0" layoutY="329.0" mnemonicParsing="false" onAction="#Handler_conferma" prefHeight="33.0" prefWidth="82.0" text="CONFERMA" />
+   </children>
+</AnchorPane>
