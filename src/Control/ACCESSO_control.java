@@ -35,6 +35,10 @@ public class ACCESSO_control {
     @FXML
     void Handler_invio(ActionEvent event) {
     	
+    	String uten= this.Txf_utente.getText().toString();
+    	String pasw= this.Pwf_password.getText().toString();
+    	this.modela.listutpas(uten, pasw);
+    	
     	
     	
 

@@ -9,12 +9,12 @@ public class ACCESSO_Dao_test {
 		// TODO Auto-generated method stub
 		
 		ACCESSO_model test= new ACCESSO_model();
-		System.out.println(test.listutpas(" ", " "));
+		System.out.println(test.listutpas("aaa", "aaa"));
 		
 		
-		ACCESSO_Bean test2= new ACCESSO_Bean();
-        test2.setUtente(" ");
-        System.out.println(test2);
+		//ACCESSO_Bean test2= new ACCESSO_Bean();
+        //test2.setPassword(" ");
+       // System.out.println(test2);
 	}
 
 }

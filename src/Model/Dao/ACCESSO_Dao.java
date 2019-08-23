@@ -8,9 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Model.ACCESSO_Bean;
+import Model.ACCESSO_model;
 import Model.connexiondb;
 
 public class ACCESSO_Dao {
+	 private ACCESSO_model messagio;
 	
 	private String sql="select * from accesso where utente=? and password=?";
 	
@@ -32,14 +34,20 @@ public List<ACCESSO_Bean> accessodb(String ut,String pswd) {
 			ACCESSO_Bean c=new ACCESSO_Bean(resul.getString("utente"),resul.getString("password"));
 			result.add(c);
 			
+			
+			
 			Conn.close();
 			prepa.close();
 			
-		} 
+		} else {
+			
+			//messagio.messagio("lei deve inserire una password e un utente giusto");
+			System.out.println("lei deve inserire una password e un utente giusto");
+		}
 		
 	} catch (SQLException e) {
 		// TODO: handle exception
-		System.err.println("acces refus al db");
+		System.err.println("lei deve inserire un utente e la password");
 		throw new RuntimeException(e);
 		
 	}
