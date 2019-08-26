@@ -15,6 +15,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class ACCESSO_control {
+	
+	String uten;
+	String pasw;
+	
 	ACCESSO_model modela;
 
     @FXML // ResourceBundle that was given to the FXMLLoader
@@ -35,8 +39,8 @@ public class ACCESSO_control {
     @FXML
     void Handler_invio(ActionEvent event) {
     	
-    	String uten= this.Txf_utente.getText().toString();
-    	String pasw= this.Pwf_password.getText().toString();
+    	 uten= this.Txf_utente.getText().toString();
+    	 pasw= this.Pwf_password.getText().toString();
     	this.modela.listutpas(uten, pasw);
     	
     	
