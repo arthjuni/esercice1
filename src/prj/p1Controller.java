@@ -4,16 +4,20 @@
 
 package prj;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class p1Controller {
 
@@ -66,6 +70,16 @@ public class p1Controller {
     @FXML
     void Handler_nuovocliente(ActionEvent event) {
 
+    	
+    	try {
+	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/ANAGRAFICA_CLIENT.fxml"));
+	        Stage primStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	        Scene scene = new Scene(loader.load());
+	        primStage.setScene(scene);
+	    }catch (IOException io){
+	        io.printStackTrace();
+	    }
+    	
     }
 
     @FXML
