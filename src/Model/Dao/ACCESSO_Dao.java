@@ -1,5 +1,6 @@
 package Model.Dao;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,12 +8,19 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import Control.ACCESSO_control;
 import Model.ACCESSO_Bean;
 import Model.ACCESSO_model;
 import Model.connexiondb;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-
+import javafx.stage.Stage;
 import javafx.scene.control.Alert.AlertType;
 
 public class ACCESSO_Dao {
@@ -31,6 +39,12 @@ public void messagio(String msg) {
 		
 	}
 	
+public void chiamapage(ActionEvent vent) {
+	
+	
+	
+}
+
 public List<ACCESSO_Bean> accessodb(String ut,String pswd) {	
 	
 	
@@ -49,8 +63,11 @@ public List<ACCESSO_Bean> accessodb(String ut,String pswd) {
 			
 			
 			
+	                
 			Conn.close();
 			prepa.close();
+			
+			
 			
 		} else {
 			
