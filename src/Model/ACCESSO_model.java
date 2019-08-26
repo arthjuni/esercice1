@@ -9,12 +9,7 @@ import javafx.scene.control.Alert.AlertType;
 
 public class ACCESSO_model {
 	
-public Alert messagio(String msg) {
-		
-		Alert parle=new Alert(AlertType.ERROR, msg ,ButtonType.CLOSE );
-		return parle;
-		
-	}
+
 
 ACCESSO_Dao beanM;
 

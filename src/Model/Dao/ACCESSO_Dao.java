@@ -10,13 +10,26 @@ import java.util.List;
 import Model.ACCESSO_Bean;
 import Model.ACCESSO_model;
 import Model.connexiondb;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+
+import javafx.scene.control.Alert.AlertType;
 
 public class ACCESSO_Dao {
-	 private ACCESSO_model messagio;
+	
 	
 	private String sql="select * from accesso where utente=? and password=?";
 	
 	private List<ACCESSO_Bean> result =new ArrayList<ACCESSO_Bean>();
+	
+	
+public void messagio(String msg) {
+		
+		Alert parle=new Alert(AlertType.ERROR, msg ,ButtonType.CLOSE );
+		//Alert et= parle.show();
+		 parle.show();
+		
+	}
 	
 public List<ACCESSO_Bean> accessodb(String ut,String pswd) {	
 	
@@ -41,13 +54,13 @@ public List<ACCESSO_Bean> accessodb(String ut,String pswd) {
 			
 		} else {
 			
-			//messagio.messagio("lei deve inserire una password e un utente giusto");
-			System.out.println("lei deve inserire una password e un utente giusto");
+			messagio("lei deve inserire una password e un utente giusto");
+			//System.out.println("lei deve inserire una password e un utente giusto");
 		}
 		
 	} catch (SQLException e) {
 		// TODO: handle exception
-		System.err.println("lei deve inserire un utente e la password");
+		System.err.println("non accesso alla tabella");
 		throw new RuntimeException(e);
 		
 	}
