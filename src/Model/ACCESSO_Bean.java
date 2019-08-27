@@ -16,7 +16,7 @@ public class ACCESSO_Bean {
 	}
 	public void setUtente(String utente) {
 		
-		if (utente.equals(null)) {
+		if (utente==null) {
 			//messagio.messagio("lei deve inserire un utente");
 			System.out.println("pas utente");
 			return;

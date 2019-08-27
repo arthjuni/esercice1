@@ -14,7 +14,7 @@ public class ACCESSO_Dao_test {
 		
 		ACCESSO_Bean test2= new ACCESSO_Bean();
         test2.setUtente(" ");
-        System.out.println(test2);
+        System.out.println(test2.getUtente());
 	}
 
 }
