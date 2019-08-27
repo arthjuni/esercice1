@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="380.0" prefWidth="549.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<AnchorPane prefHeight="380.0" prefWidth="549.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Control.RESTITUZIONE_VIDEO_control">
    <children>
       <CheckBox id="Ckb_cattivostato" fx:id="Ckb_cattivostato" layoutX="427.0" layoutY="65.0" mnemonicParsing="false" onAction="#Handler_cattivostato" text="CATTIVO STATO" />
       <Label layoutX="189.0" layoutY="14.0" text="RESTITUZIONE VIDEO">

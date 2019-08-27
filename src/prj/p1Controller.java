@@ -58,12 +58,29 @@ public class p1Controller {
     private Button Btn_conferma; // Value injected by FXMLLoader
 
     @FXML
-    void Handler_conferma(ActionEvent event) {
+    void Handler_conferma(ActionEvent evnt) {
 
+    	
+    	
     }
 
     @FXML
-    void Handler_durata(ActionEvent event) {
+    void Handler_durata(ActionEvent evet) {
+
+    	
+    	
+    }
+    
+    @FXML
+    void Handler_listavideo(ActionEvent ont) {
+    	try {
+	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/LISTA_VIDEO.fxml"));
+	        Stage primStage = (Stage)((Node)ont.getSource()).getScene().getWindow();
+	        Scene scene = new Scene(loader.load());
+	        primStage.setScene(scene);
+	    }catch (IOException io){
+	        io.printStackTrace();
+	    }
 
     }
 
@@ -83,13 +100,31 @@ public class p1Controller {
     }
 
     @FXML
-    void Handler_ricercaclient(ActionEvent event) {
+    void Handler_ricercaclient(ActionEvent vent) {
 
+    	try {
+	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/RICERCA_CLIENT.fxml"));
+	        Stage primStage = (Stage)((Node)vent.getSource()).getScene().getWindow();
+	        Scene scene = new Scene(loader.load());
+	        primStage.setScene(scene);
+	    }catch (IOException io){
+	        io.printStackTrace();
+	    }
+    	
     }
 
     @FXML
-    void Handler_ricercavideo(ActionEvent event) {
+    void Handler_ricercavideo(ActionEvent ent) {
 
+    	try {
+	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/RICERCA_VIDEO.fxml"));
+	        Stage primStage = (Stage)((Node)ent.getSource()).getScene().getWindow();
+	        Scene scene = new Scene(loader.load());
+	        primStage.setScene(scene);
+	    }catch (IOException io){
+	        io.printStackTrace();
+	    }
+    	
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete

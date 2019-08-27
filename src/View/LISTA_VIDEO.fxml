@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="Acp_listavideo" fx:id="Acp_listavideo" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Control.LISTA_VIDEO_control">
+   <children>
+      <ListView id="Lsv_listavideo" fx:id="Lsv_listavideo" prefHeight="973.0" prefWidth="1093.0" />
+   </children>
+</AnchorPane>

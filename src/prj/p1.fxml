@@ -54,7 +54,7 @@
                         <Insets bottom="30.0" left="10.0" right="20.0" top="25.0" />
                      </VBox.margin>
                   </Button>
-                  <Button id="Btn_listavideo" fx:id="Btn_listavideo" mnemonicParsing="false" onAction="#Handler_ricercavideo" prefHeight="30.0" prefWidth="263.0" text="LISTA VIDEO" >
+                  <Button id="Btn_listavideo" fx:id="Btn_listavideo" mnemonicParsing="false" onAction="#Handler_listavideo" prefHeight="30.0" prefWidth="263.0" text="LISTA VIDEO">
                      <font>
                         <Font size="14.0" />
                      </font>

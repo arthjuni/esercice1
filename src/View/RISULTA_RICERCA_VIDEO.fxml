@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="Ahp_listadeifilm" fx:id="Ahp_listadeifilm" prefHeight="200.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<AnchorPane id="Ahp_listadeifilm" fx:id="Ahp_listadeifilm" prefHeight="200.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.RISULTA_RICERCA_VIDEO_control">
    <children>
       <Label layoutX="106.0" layoutY="-1.0" prefHeight="31.0" prefWidth="135.0" text="LISTA DEI FILM">
          <font>

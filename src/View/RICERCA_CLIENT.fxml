@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="Ahp_ricerca" fx:id="Ahp_ricerca" prefHeight="150.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<AnchorPane id="Ahp_ricerca" fx:id="Ahp_ricerca" prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.RICERCA_CLIENT_control">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="-1.0" text="RICERCA">
          <font>

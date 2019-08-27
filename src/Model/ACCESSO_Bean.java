@@ -6,7 +6,7 @@ import javafx.scene.control.ButtonType;
 
 public class ACCESSO_Bean {
 	
-     private ACCESSO_model messagio;
+     //private ACCESSO_model messagio;
 	/*utente */private String utente;
 	/*password*/private String password;
 	
@@ -16,7 +16,7 @@ public class ACCESSO_Bean {
 	}
 	public void setUtente(String utente) {
 		
-<<<<<<< HEAD
+/*HEAD
 		if (utente==null) {
 =======
 		if (utente.isEmpty() ||utente==" ") {
@@ -24,10 +24,10 @@ public class ACCESSO_Bean {
 			//messagio.messagio("lei deve inserire un utente");
 			System.out.println("pas utente");
 			return;
-		}else {
+		}else {*/
 		
 			this.utente = utente;
-		}
+		//}
 	}
 	
 	
@@ -37,14 +37,14 @@ public class ACCESSO_Bean {
 		return password;
 	}
 	public void setPassword(String password) {
-		if (password.isEmpty()||password ==" ") {
+		/*if (password.isEmpty()||password ==" ") {
 			//messagio.messagio("lei deve inserire una password");
 			System.out.println("lei deve inserire una password");
 			return;
-		}else {
+		}else {*/
 		
 			this.password = password;
-		}
+		//}
 		
 		
 	}
