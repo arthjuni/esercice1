@@ -16,7 +16,11 @@ public class ACCESSO_Bean {
 	}
 	public void setUtente(String utente) {
 		
+<<<<<<< HEAD
 		if (utente==null) {
+=======
+		if (utente.isEmpty() ||utente==" ") {
+>>>>>>> branch 'master' of https://github.com/arthjuni/esercice1.git
 			//messagio.messagio("lei deve inserire un utente");
 			System.out.println("pas utente");
 			return;
@@ -33,8 +37,9 @@ public class ACCESSO_Bean {
 		return password;
 	}
 	public void setPassword(String password) {
-		if (password.equals(null)) {
-			messagio.messagio("lei deve inserire una password");
+		if (password.isEmpty()||password ==" ") {
+			//messagio.messagio("lei deve inserire una password");
+			System.out.println("lei deve inserire una password");
 			return;
 		}else {
 		
@@ -53,7 +58,7 @@ public class ACCESSO_Bean {
 	}
 	@Override
 	public String toString() {
-		return "ACCESSO_Bean : utente=" + utente + ", password=" + password + "";
+		return "ACCESSO_Bean : utente=" + getUtente() + ", password=" + getPassword() + "";
 	}
 	
 	

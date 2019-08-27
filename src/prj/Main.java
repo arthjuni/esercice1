@@ -20,13 +20,13 @@ public class Main extends Application {
 			
 			Scene scene = new Scene(root);
 			
-			ACCESSO_control controller = new ACCESSO_control();
+			ACCESSO_control controller = LOADER.getController();
 			ACCESSO_model model=new  ACCESSO_model();
 			
 			
 			controller.setmodel(model);
 			
-			LOADER.setController(controller);
+		//	LOADER.setController(controller);
 			
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			
