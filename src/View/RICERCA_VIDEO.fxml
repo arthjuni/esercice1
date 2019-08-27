@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="Btn_invio" fx:id="Btn_invio" onDragDetected="#Handler_invio" prefHeight="150.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.RICERCA_VIDEO_control">
+<AnchorPane id="Acp_ricercavideo" fx:id="Acp_ricercavideo" prefHeight="150.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.RICERCA_VIDEO_control">
    <children>
       <Label layoutX="159.0" layoutY="6.0" prefHeight="17.0" prefWidth="128.0" text="RICERCA VIDEO">
          <font>
@@ -15,6 +15,6 @@
       </Label>
       <Label layoutX="5.0" layoutY="48.0" prefHeight="17.0" prefWidth="60.0" text="TITOLO :" />
       <TextField id="Txf_titolo" fx:id="Txf_titolo" layoutX="85.0" layoutY="44.0" prefHeight="25.0" prefWidth="298.0" />
-      <Button layoutX="317.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="INVIO" />
+      <Button id="Btn_invio" fx:id="Btn_invio" layoutX="317.0" layoutY="102.0" mnemonicParsing="false" onAction="#Handler_invio" prefHeight="25.0" prefWidth="66.0" text="INVIO" />
    </children>
 </AnchorPane>

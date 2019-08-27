@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="Acp_listavideo" fx:id="Acp_listavideo" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Control.LISTA_VIDEO_control">
+<AnchorPane id="Acp_listavideo" fx:id="Acp_listavideo" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.LISTA_VIDEO_control">
    <children>
-      <ListView id="Lsv_listavideo" fx:id="Lsv_listavideo" prefHeight="973.0" prefWidth="1093.0" />
+      <ListView id="Lsv_listavideo" fx:id="Lsv_listavideo" prefHeight="338.0" prefWidth="500.0" />
+      <Button id="Btn_home" fx:id="Btn_home" layoutX="422.0" layoutY="340.0" mnemonicParsing="false" onAction="#Handler_Btn_home" prefHeight="31.0" prefWidth="78.0" text="HOME" />
    </children>
 </AnchorPane>

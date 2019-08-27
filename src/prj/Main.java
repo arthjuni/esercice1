@@ -4,6 +4,9 @@ package prj;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+
+
+
 import Control.ACCESSO_control;
 import Model.ACCESSO_model;
 import javafx.application.Application;
@@ -39,6 +42,8 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
+	
+	
 	
 	public static void main(String[] args) {
 		launch(args);

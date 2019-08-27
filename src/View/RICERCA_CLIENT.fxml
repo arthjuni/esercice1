@@ -14,7 +14,7 @@
          </font>
       </Label>
       <Label layoutX="11.0" layoutY="51.0" text="NOM CLIENT :" />
-      <TextField id="Txf_ricercaclient" fx:id="Txf_ricercaclient" layoutX="96.0" layoutY="47.0" prefHeight="25.0" prefWidth="192.0" />
+      <TextField id="Txf_ricercaclient" fx:id="Txf_ricercaclient" layoutX="96.0" layoutY="47.0" prefHeight="25.0" prefWidth="154.0" />
       <Button id="Btn_invio" fx:id="Btn_invio" layoutX="222.0" layoutY="104.0" mnemonicParsing="false" onAction="#Handler_invio" text="INVIO" />
    </children>
 </AnchorPane>
