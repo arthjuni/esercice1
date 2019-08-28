@@ -67,6 +67,20 @@ public class CLIENTE_Bean {
 	}
 
 
+	public CLIENTE_Bean(String codfiscale, String nome, String cognome, String telefonocasa, String telefonocellulare,
+			String email, Date datanascita, String indirizzo) {
+		super();
+		Codfiscale = codfiscale;
+		Nome = nome;
+		Cognome = cognome;
+		Telefonocasa = telefonocasa;
+		Telefonocellulare = telefonocellulare;
+		Email = email;
+		Datanascita = datanascita;
+		Indirizzo = indirizzo;
+	}
+
+
 	public Integer getCodeClient() {
 		return CodeClient;
 	}
