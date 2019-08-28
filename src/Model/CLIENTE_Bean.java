@@ -11,7 +11,7 @@ public class CLIENTE_Bean {
 	private String Telefonocasa;
 	private String Telefonocellulare ;
 	private String Email;
-	private Date Datanascita;
+	private java.sql.Date Datanascita;
 	private Character tipo;
 	private String Indirizzo;
 	private DOCUMENTO_Bean documento;
@@ -22,20 +22,8 @@ public class CLIENTE_Bean {
 	}
 
 
-	public CLIENTE_Bean(String codfiscale, String nome, String cognome, String telefonocellulare, Date datanascita,
-			String indirizzo) {
-		super();
-		Codfiscale = codfiscale;
-		Nome = nome;
-		Cognome = cognome;
-		Telefonocellulare = telefonocellulare;
-		Datanascita = datanascita;
-		Indirizzo = indirizzo;
-	}
-
-
 	public CLIENTE_Bean(String codfiscale, String nome, String cognome, String telefonocasa, String telefonocellulare,
-			String email, Date datanascita, Character tipo, String indirizzo) {
+			String email, java.sql.Date datanascita, String indirizzo) {
 		super();
 		Codfiscale = codfiscale;
 		Nome = nome;
@@ -44,13 +32,48 @@ public class CLIENTE_Bean {
 		Telefonocellulare = telefonocellulare;
 		Email = email;
 		Datanascita = datanascita;
-		this.tipo = tipo;
+		Indirizzo = indirizzo;
+	}
+
+
+	public CLIENTE_Bean(String codfiscale, String nome, String cognome, String telefonocasa, String telefonocellulare,
+			String email, String indirizzo) {
+		super();
+		Codfiscale = codfiscale;
+		Nome = nome;
+		Cognome = cognome;
+		Telefonocasa = telefonocasa;
+		Telefonocellulare = telefonocellulare;
+		Email = email;
+		Indirizzo = indirizzo;
+	}
+
+	
+
+	public CLIENTE_Bean(String nome, String cognome, String telefonocasa, String telefonocellulare, String email,
+			String indirizzo) {
+		super();
+		Nome = nome;
+		Cognome = cognome;
+		Telefonocasa = telefonocasa;
+		Telefonocellulare = telefonocellulare;
+		Email = email;
+		Indirizzo = indirizzo;
+	}
+
+
+	public CLIENTE_Bean(String nome, String cognome, String telefonocasa, java.sql.Date datanascita, String indirizzo) {
+		super();
+		Nome = nome;
+		Cognome = cognome;
+		Telefonocasa = telefonocasa;
+		Datanascita = datanascita;
 		Indirizzo = indirizzo;
 	}
 
 
 	public CLIENTE_Bean(Integer codeClient, String codfiscale, String nome, String cognome, String telefonocasa,
-			String telefonocellulare, String email, Date datanascita, Character tipo, String indirizzo,
+			String telefonocellulare, String email, java.sql.Date datanascita, Character tipo, String indirizzo,
 			DOCUMENTO_Bean documento) {
 		super();
 		CodeClient = codeClient;
@@ -64,20 +87,6 @@ public class CLIENTE_Bean {
 		this.tipo = tipo;
 		Indirizzo = indirizzo;
 		this.documento = documento;
-	}
-
-
-	public CLIENTE_Bean(String codfiscale, String nome, String cognome, String telefonocasa, String telefonocellulare,
-			String email, Date datanascita, String indirizzo) {
-		super();
-		Codfiscale = codfiscale;
-		Nome = nome;
-		Cognome = cognome;
-		Telefonocasa = telefonocasa;
-		Telefonocellulare = telefonocellulare;
-		Email = email;
-		Datanascita = datanascita;
-		Indirizzo = indirizzo;
 	}
 
 
@@ -151,12 +160,12 @@ public class CLIENTE_Bean {
 	}
 
 
-	public Date getDatanascita() {
+	public java.sql.Date getDatanascita() {
 		return Datanascita;
 	}
 
 
-	public void setDatanascita(Date datanascita) {
+	public void setDatanascita(java.sql.Date datanascita) {
 		Datanascita = datanascita;
 	}
 
@@ -196,8 +205,6 @@ public class CLIENTE_Bean {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((CodeClient == null) ? 0 : CodeClient.hashCode());
-		result = prime * result + ((Codfiscale == null) ? 0 : Codfiscale.hashCode());
-		result = prime * result + ((documento == null) ? 0 : documento.hashCode());
 		return result;
 	}
 
@@ -216,16 +223,6 @@ public class CLIENTE_Bean {
 				return false;
 		} else if (!CodeClient.equals(other.CodeClient))
 			return false;
-		if (Codfiscale == null) {
-			if (other.Codfiscale != null)
-				return false;
-		} else if (!Codfiscale.equals(other.Codfiscale))
-			return false;
-		if (documento == null) {
-			if (other.documento != null)
-				return false;
-		} else if (!documento.equals(other.documento))
-			return false;
 		return true;
 	}
 
@@ -237,7 +234,8 @@ public class CLIENTE_Bean {
 				+ Email + ", Datanascita=" + Datanascita + ", tipo=" + tipo + ", Indirizzo=" + Indirizzo
 				+ ", documento=" + documento + "]";
 	}
-	
+
+
 	
 	
 	

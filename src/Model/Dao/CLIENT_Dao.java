@@ -17,17 +17,28 @@ public class CLIENT_Dao {
 	List<CLIENTE_Bean>insereAnagrafica=new ArrayList<CLIENTE_Bean>();
 	
 	public List<CLIENTE_Bean> liredb(CLIENTE_Bean p) {
-		sql="insert into cliente (codfiscale,nome,cognome,Telefonocasa,telefonocellulare,email,datanascita,indirizzo)values(?,?,?,?,?,?,?,?)";
+		sql="insert into cliente (codfiscale,nome,cognome,Telefonocasa,telefonocellulare,email,indirizzo)values(?,?,?,?,?,?,?)";
 		
 		try {
 			Connection conn=connexiondb.getconnection();
 			PreparedStatement prepa=conn.prepareStatement(sql);
 			
-		/*CLIENTE_Bean cliente_Bean= new CLIENTE_Bean(prepa.setString(1,p.getCodfiscale()), prepa.setString(2, p.getNome()),prepa.setString(3, p.getCognome()), prepa.setString(4, p.getTelefonocasa()),prepa.setString(5, p.getTelefonocellulare()), prepa.setString(6, p.getEmail()),prepa.setDouble(7, p.getDatanascita()),prepa.setString(8, p.getIndirizzo()));*/
+		
 			 
+		prepa.setString(1, p.getCodfiscale());
+		prepa.setString(2, p.getNome());
+		prepa.setString(3, p.getCognome());
+		prepa.setString(4, p.getTelefonocasa());
+		prepa.setString(5, p.getTelefonocellulare());
+		prepa.setString(6, p.getEmail());
+		prepa.setString(7, p.getIndirizzo());
+		
+		
+		
+		
 			 prepa.executeUpdate();
 			 
-			 insereAnagrafica.add(p);
+			// insereAnagrafica.add(p);
 			 
 			conn.close();
 			

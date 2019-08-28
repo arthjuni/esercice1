@@ -4,15 +4,30 @@
 
 package Control;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import Model.CLIENTE_Bean;
+import Model.CLIENT_model;
+import Model.Dao.ACCESSO_Dao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
+import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Stage;
+
 public class ANAGRAFICA_CLIENT_controller {
+	
+	CLIENT_model clmod=new CLIENT_model();
 
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;
@@ -46,10 +61,37 @@ public class ANAGRAFICA_CLIENT_controller {
 
     @FXML // fx:id="Btn_cancel"
     private Button Btn_cancel; // Value injected by FXMLLoader
+    
+    
+    @FXML
+    void Handler_invio(ActionEvent event) {
+
+    	if ((Txf_cognome.getText().isEmpty() || Txf_cognome.getText().equals(null)  )|| (Txf_email.getText().isEmpty()|| Txf_email.getText().equals(null) )|| (Txf_indirizzo.getText().isEmpty() || Txf_indirizzo.getText().equals(null) )|| (Txf_nome.getText().isEmpty() || Txf_nome.getText().equals(null) )|| (Txf_telefonocasa.getText().isEmpty() || Txf_telefonocasa.getText().equals(null) )||( Txf_telefonocellulare.getText().isEmpty() || Txf_telefonocellulare.getText().equals(null))) {
+			
+    		Alert parle=new Alert(AlertType.WARNING, "dovete compilare il modulo" ,ButtonType.CLOSE );
+    		//Alert et= parle.show();
+    		 parle.show();
+    		 return;
+    		
+        	
+        	}else {
+        		this.clmod.inslientdao(new CLIENTE_Bean(Txf_nome.getText().toString(), Txf_cognome.getText().toString(), Txf_telefonocasa.getText().toString() ,Txf_telefonocellulare.getText().toString(), Txf_email.getText().toString(), Txf_indirizzo.getText().toString()));
+        		return;
+        	}
+    }
 
     @FXML
     void Handler_cancel(ActionEvent event) {
-
+    	
+    	try {
+	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/prj/p1.fxml"));
+	        Stage primStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	        Scene scene = new Scene(loader.load());
+	        primStage.setScene(scene);
+	    }catch (IOException io){
+	        io.printStackTrace();
+	    }
+    	
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
@@ -64,5 +106,20 @@ public class ANAGRAFICA_CLIENT_controller {
         assert Btn_invio != null : "fx:id=\"Btn_invio\" was not injected: check your FXML file 'ANAGRAFICA_CLIENT.fxml'.";
         assert Btn_cancel != null : "fx:id=\"Btn_cancel\" was not injected: check your FXML file 'ANAGRAFICA_CLIENT.fxml'.";
 
+        
+        //-------------------------------------------------------------------------------------------------------------------
+        
+        Txf_cognome.clear();
+        Txf_email.clear();
+        Txf_indirizzo.clear();
+        Txf_nome.clear();
+        Txf_telefonocasa.clear();
+        Txf_telefonocellulare.clear();
+        
     }
+
+	public void setclientmodel(CLIENT_model CLIENTMODEL) {
+		// TODO Auto-generated method stub
+		this.clmod=CLIENTMODEL;
+	}
 }

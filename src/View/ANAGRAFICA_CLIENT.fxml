@@ -28,7 +28,7 @@
       <TextField id="Txf_telefonocasa" fx:id="Txf_telefonocasa" layoutX="170.0" layoutY="217.0" prefHeight="25.0" prefWidth="321.0" />
       <Label layoutX="31.0" layoutY="372.0" text="DATA DI NASCITA :" />
       <DatePicker id="Dtp_datadinascita" fx:id="Dtp_datadinascita" layoutX="317.0" layoutY="360.0" />
-      <Button id="Btn_invio" fx:id="Btn_invio" layoutX="356.0" layoutY="520.0" mnemonicParsing="false" onAction="#Handler_cancel" text="INVIO" />
+      <Button id="Btn_invio" fx:id="Btn_invio" layoutX="356.0" layoutY="520.0" mnemonicParsing="false" onAction="#Handler_invio" text="INVIO" />
       <Button id="Btn_cancel" fx:id="Btn_cancel" layoutX="183.0" layoutY="520.0" mnemonicParsing="false" onAction="#Handler_cancel" text="CANCEL" />
    </children>
 </AnchorPane>
