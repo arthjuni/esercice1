@@ -24,4 +24,23 @@ public List<ACCESSO_Bean>listutpas(String ut,String pswd){
 	return lista;
 }
 
+
+
+public String infolavr() {
+	
+	
+	return this.beanM.lavoro;
+}
+/*
+public String inforcogno() {
+	
+	
+	return this.beanM.lav;
+}
+/*
+public String infornom() {
+	
+	
+	return this.beanM.nomelavorator;
+}*/
 }

@@ -7,6 +7,8 @@ package prj;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import Model.ACCESSO_model;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,8 +22,15 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class p1Controller {
+	
+ 
+	ACCESSO_model modelacces= new ACCESSO_model();
+	
+    public void setModelacces(ACCESSO_model modelacces) {
+		this.modelacces = modelacces;
+	}
 
-    @FXML // ResourceBundle that was given to the FXMLLoader
+	@FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;
 
     @FXML // URL location of the FXML file that was given to the FXMLLoader
@@ -140,5 +149,8 @@ public class p1Controller {
         assert Txa_noleggio != null : "fx:id=\"Txa_noleggio\" was not injected: check your FXML file 'p1.fxml'.";
         assert Btn_conferma != null : "fx:id=\"Btn_conferma\" was not injected: check your FXML file 'p1.fxml'.";
 
+       // Txa_noleggio.appendText("LAVORO :"+modelacces.listutpas(ut, pswd)+"\n");
+        Txa_noleggio.appendText("COGNOME :"+modelacces.infolavr()+"\n");
+      //  Txa_noleggio.appendText("NOME :"+modelacces.infornom()+"\n");
     }
 }

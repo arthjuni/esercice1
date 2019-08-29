@@ -4,6 +4,7 @@
 
 package Control;
 
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,7 +12,7 @@ import java.util.ResourceBundle;
 import Model.CLIENTE_Bean;
 import Model.CLIENT_model;
 import Model.Dao.ACCESSO_Dao;
-import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;

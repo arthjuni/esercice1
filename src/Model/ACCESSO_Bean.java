@@ -9,8 +9,44 @@ public class ACCESSO_Bean {
      //private ACCESSO_model messagio;
 	/*utente */private String utente;
 	/*password*/private String password;
+	private String lavoro;
+	private String cognomelavorator;
+	private String nomelavorator;
 	
 	
+	
+	public ACCESSO_Bean(String utente, String password, String lavoro, String cognomelavorator, String nomelavorator) {
+		super();
+		this.utente = utente;
+		this.password = password;
+		this.lavoro = lavoro;
+		this.cognomelavorator = cognomelavorator;
+		this.nomelavorator = nomelavorator;
+	}
+	public ACCESSO_Bean(String lavoro, String cognomelavorator, String nomelavorator) {
+		super();
+		this.lavoro = lavoro;
+		this.cognomelavorator = cognomelavorator;
+		this.nomelavorator = nomelavorator;
+	}
+	public String getLavoro() {
+		return lavoro;
+	}
+	public void setLavoro(String lavoro) {
+		this.lavoro = lavoro;
+	}
+	public String getCognomelavorator() {
+		return cognomelavorator;
+	}
+	public void setCognomelavorator(String cognomelavorator) {
+		this.cognomelavorator = cognomelavorator;
+	}
+	public String getNomelavorator() {
+		return nomelavorator;
+	}
+	public void setNomelavorator(String nomelavorator) {
+		this.nomelavorator = nomelavorator;
+	}
 	public String getUtente() {
 		return utente;
 	}

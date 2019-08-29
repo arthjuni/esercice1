@@ -26,9 +26,10 @@ import javafx.scene.control.Alert.AlertType;
 public class ACCESSO_Dao {
 	
 	
-	private String sql="select * from accesso where utente=? and password=?";
+	private String sql="select * from viewinfoaccesso where utente=? and password=?";
 	
 	private List<ACCESSO_Bean> result =new ArrayList<ACCESSO_Bean>();
+	//private List<ACCESSO_Bean>resutaperinfo = new ArrayList<ACCESSO_Bean>();
 	
 	
 public void messagio(String msg) {
@@ -38,12 +39,14 @@ public void messagio(String msg) {
 		 parle.show();
 		
 	}
+
+ public static String lavoro;
+public String cognomelavorator;
+public String nomelavorator;
 	
-public void chiamapage(ActionEvent vent) {
+
 	
-	
-	
-}
+
 
 public List<ACCESSO_Bean> accessodb(String ut,String pswd) {	
 	
@@ -58,12 +61,18 @@ public List<ACCESSO_Bean> accessodb(String ut,String pswd) {
 		ResultSet resul=prepa.executeQuery();
 		
 		if (resul.next()) {
-			ACCESSO_Bean c=new ACCESSO_Bean(resul.getString("utente"),resul.getString("password"));
+			//ACCESSO_Bean c=new ACCESSO_Bean(resul.getString("utente"),resul.getString("password"));
+			//result.add(c);
+			
+			ACCESSO_Bean c= new ACCESSO_Bean(resul.getString("utente"), resul.getString("password"), resul.getString("nomeP"), resul.getString("cognome"), resul.getString("nome"));
 			result.add(c);
 			
+			 lavoro= resul.getString("nomeP");
+			/* lavoro= resul.getString("nomeP");
+			 cognomelavorator= resul.getString("cognome");
+			 nomelavorator= resul.getString("nome");*/
+					
 			
-			
-	                
 			Conn.close();
 			prepa.close();
 			
@@ -84,7 +93,10 @@ public List<ACCESSO_Bean> accessodb(String ut,String pswd) {
 	
 	
 	
-return result;
+	
+return result ;
 }
+
+
 
 }
