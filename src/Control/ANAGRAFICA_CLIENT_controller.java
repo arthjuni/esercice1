@@ -75,7 +75,7 @@ public class ANAGRAFICA_CLIENT_controller {
     		
         	
         	}else {
-        		this.clmod.inslientdao(new CLIENTE_Bean(Txf_nome.getText().toString(), Txf_cognome.getText().toString(), Txf_telefonocasa.getText().toString() ,Txf_telefonocellulare.getText().toString(), Txf_email.getText().toString(), Txf_indirizzo.getText().toString()));
+        		this.clmod.inslientdao(new CLIENTE_Bean(Txf_nome.getText().toString(), Txf_cognome.getText().toString(), Txf_telefonocasa.getText().toString() ,Txf_telefonocellulare.getText().toString(), Txf_email.getText().toString(),Dtp_datadinascita.getValue().toString(), Txf_indirizzo.getText().toString()));
         		return;
         	}
     }
@@ -113,6 +113,7 @@ public class ANAGRAFICA_CLIENT_controller {
         Txf_email.clear();
         Txf_indirizzo.clear();
         Txf_nome.clear();
+       
         Txf_telefonocasa.clear();
         Txf_telefonocellulare.clear();
         

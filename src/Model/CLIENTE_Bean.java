@@ -2,6 +2,8 @@ package Model;
 
 import java.util.Date;
 
+import javafx.scene.chart.PieChart.Data;
+
 public class CLIENTE_Bean {
 	
 	private Integer CodeClient  ;
@@ -67,6 +69,20 @@ public class CLIENTE_Bean {
 		Nome = nome;
 		Cognome = cognome;
 		Telefonocasa = telefonocasa;
+		Datanascita = datanascita;
+		Indirizzo = indirizzo;
+	}
+
+	
+
+	public CLIENTE_Bean(String nome, String cognome, String telefonocasa, String telefonocellulare, String email,
+			java.sql.Date datanascita, String indirizzo) {
+		super();
+		Nome = nome;
+		Cognome = cognome;
+		Telefonocasa = telefonocasa;
+		Telefonocellulare = telefonocellulare;
+		Email = email;
 		Datanascita = datanascita;
 		Indirizzo = indirizzo;
 	}

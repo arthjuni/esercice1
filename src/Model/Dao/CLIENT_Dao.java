@@ -3,7 +3,7 @@ package Model.Dao;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ public class CLIENT_Dao {
 	List<CLIENTE_Bean>insereAnagrafica=new ArrayList<CLIENTE_Bean>();
 	
 	public List<CLIENTE_Bean> liredb(CLIENTE_Bean p) {
-		sql="insert into cliente (codfiscale,nome,cognome,Telefonocasa,telefonocellulare,email,indirizzo)values(?,?,?,?,?,?,?)";
+		sql="insert into inserannagrafa (cognome,nome,indirizzo,telefonocasa,telefonocellulare,email,datanascita)values(?,?,?,?,?,?,?)";
 		
 		try {
 			Connection conn=connexiondb.getconnection();
@@ -25,13 +25,15 @@ public class CLIENT_Dao {
 			
 		
 			 
-		prepa.setString(1, p.getCodfiscale());
-		prepa.setString(2, p.getNome());
-		prepa.setString(3, p.getCognome());
-		prepa.setString(4, p.getTelefonocasa());
+		//prepa.setString(1, p.getCodfiscale());
+			prepa.setString(4, p.getCognome());
+			prepa.setString(2, p.getNome());
+			prepa.setString(3, p.getIndirizzo());
+		prepa.setString(1, p.getTelefonocasa());
 		prepa.setString(5, p.getTelefonocellulare());
 		prepa.setString(6, p.getEmail());
-		prepa.setString(7, p.getIndirizzo());
+		prepa.setDate(7, p.getDatanascita());
+		
 		
 		
 		
